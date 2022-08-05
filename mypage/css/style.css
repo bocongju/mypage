@@ -37,7 +37,75 @@ a{
 	text-decoration: none;
 	color: #333;
 }
-
+/* -------------------------- *\
+	Layout
+\* -------------------------- */
+/* grid system */
+.container{
+	width: 1140px;
+	margin: 0 auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.row{
+	
+}
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.col-lg-6,.col-lg-4,.col-lg-3,.col-lg-12,
+.col-md-6,.col-md-4,.col-md-3,.col-md-12,
+.col-sm-6,.col-sm-4,.col-sm-3,.col-sm-12{
+	float: left;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.col-lg-3{
+	width: 25%;
+}
+.col-lg-4{
+	width: 33.3333333%;
+}
+.col-lg-6{
+	width: 50%;
+}
+.col-lg-12{
+	width: 100%;
+}
+@media screen and (max-width: 768px){
+	.col-md-3{
+		width: 25%;
+	}
+	.col-md-4{
+		width: 33.3333333%;
+	}
+	.col-md-6{
+		width: 50%;
+	}
+	.col-md-12{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 540px){
+	.col-sm-3{
+		width: 25%;
+	}
+	.col-sm-4{
+		width: 33.3333333%;
+	}
+	.col-sm-6{
+		width: 50%;
+	}
+	.col-sm-12{
+		width: 100%;
+	}
+}
+img{
+    vertical-align: top;
+    width: 100%;
+}
 /* -------------------------- *\
 	Component
 \* -------------------------- */
@@ -51,12 +119,6 @@ a{
 /* image container */
 .image-container{
 	width: 100%;
-}
-.image-container:before{
-	content: '';
-	display: block;
-	width: 100%;
-	padding-top: 80%;
 }
 .image-container .image{
 	position: absolute;
@@ -137,28 +199,48 @@ a{
     color: #fff;
     font-size: 56px;
 }
-/* about-preview */
-.about-preview .about-title{
+/* about*/
+.about{
+	width: 1000px;
+	margin: 0 auto 0 auto;
+	padding-bottom: 200px;
+}
+.about .about-tit{
+	text-align: center;
+	font-size: 32px;
+	color:#333 ;
+}
+.about .about-contents{
+	display: flex;
+	margin-top: 100px;
+	justify-content: space-between;
+}
+.about-contents .about-img{
+	width: 400px;
+}
+.about-img img{
+	vertical-align: top;
+	width: 100%;
+}
+.about-preview .contents-title{
 	font-size: 32px;
 	color: #333;
 	margin-bottom: 24px;
 	margin-top: 40px;
 }
-.about-preview .para{
+.about-preview p{
 	font-size: 16px;
 	line-height: 32px;
 	text-align: justify;
 	color: #333;
 	margin-bottom: 24px;
 }
-.contact{
-	display: inline-block;
+.about-contents .contact{
 	position: absolute;
-	bottom: 16px;
-	right: 52px;
+	bottom: 0;
+	right: 0;
 }
 .contact .icon{
-	
 	margin-top: 20px;
 }
 .contact .icon i{
@@ -166,26 +248,33 @@ a{
 	color: #686C71;
 }
 /*  experience */
-.exp .exp-info{
-	text-align: center;
+.exp{
+	
 }
-.exp .exp-info .title{
+.exp .exp-title h3{
 	font-size: 32px;
 	color: #686C71;
+	text-align: center;
 }
-.exp .left-info{
-	font-size: 16px;
+.exp .exp-contents{
+	display: flex;
+	margin-top: 100px;
+	justify-content: space-between;
 }
-.exp .left-info .exp-item{
+.exp .exp-info{
+	width: 500px;
+}
+.exp .exp-info .exp-item{
 	color: #686C71;
 	margin-top: 32px;
+	font-size: 16px;
 }
 .exp .skill{
 	text-align: center;
 	margin-top: 50px;
+	margin-left: 50px;
 }
 .exp .skill .icon{
-	
 	font-size: 36px;
 }
 .exp .skill h3{
@@ -198,19 +287,58 @@ a{
 	color: #999999;
 }
 /* project */
+.project{
+}
 .project .project-info{
 	text-align: center;
-	padding-bottom: 64px;
 }
 .project .title{
 	font-size: 32px;
 	color: #151730;
 }
-.project .list-item .preview{
-	padding-top: 16px;
+.project-item{
+	margin-top: 100px;
 }
-.project .list-item .preview .title{
-	font-size: 16px;
+.project-item .project-item-tit{
+	text-align: center;
+	font-size: 32px;
+	font-weight: 500;
+	margin-bottom: 50px;
+}
+.project .project-inner{
+	padding: 70px;
+	border-radius: 50px;
+}
+.project .project-inner img{
+	width: 400px;
+	margin-left: 35px;
+}
+
+.project .project-item p{
+	margin-top: 40px;
+	font-size: 20px;
+	font-weight: 400;
+	width: 400px;
+	height: 450px;
+}
+.project .project-item .btn{
+	display: inline-block;
+    vertical-align: center;
+	font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px 10px;
+    border: 2px solid #222;
+    border-radius: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translatex(-50%);
+	transition: all 0.5s;
+}
+.project .project-item .btn:hover{
+	background: #000;
+	color: #ccc;
 }
 /* silder plugin setting*/
 .owl-theme .owl-dots{
@@ -227,7 +355,7 @@ a{
 	outline: none;
 }
 .owl-theme .owl-dots button.owl-dot.active{
-	background-color: #FABC13;
+	background-color: #686C71;
 }
 .owl-theme .owl-nav{
 	position: absolute;

@@ -9,9 +9,9 @@
     <!-- reset -->
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- vendor -->
-    <link rel="stylesheet" href="./vendor/bootstrap_4-grid/bootstrap-grid.css">
     <link rel="stylesheet" href="./vendor/fontawesome-free-6.1.1-web/css/all.css">
     <link rel="stylesheet" href="./vendor/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vendor/animate/animate.css">
     <!-- custom -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -57,27 +57,25 @@
 
             <!-- start about -->
             <div id="about" class="about hero hero-bg-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="image-container js-fadeInLeft">
-                                <div class="image" style="background-image: url(./images/me.jpg);"></div>
-                            </div>
+                <div class="about-tit">
+                    <h3>關於我</h3>
+                </div>
+                <div class="about-contents">
+                    <div class="about-img js-fadeInLeft">
+                        <img src="./images/me.jpg" alt="">
+                    </div>
+                    <div class="js-fadeInRight">
+                        <div class="about-preview">
+                            <h3 class="contents-title">歡迎來到我的個人頁面</h3>
+                            <p>
+                                這是我第一個從發想到完成都自己製作的個人網頁，這裡會不定時<br>更新我的學習紀錄和個人專案作品，如果有興趣可以看看。
+                            </p>
                         </div>
-                        <div class="col-lg-6 js-fadeInRight">
-                            <div class="about-preview">
-                                <h3 class="about-title">歡迎來到我的個人頁面</h3>
-                                <div class="para">
-                                    這是我第一個從發想到完成都自己製作的個人網頁，這裡會不定時<br>更新我的學習紀錄和個人專案作品，如果有興趣的話可以看看。
-                                </div>
-                            </div>
-
-                            <div class="contact">
-                                <div class="icon"><i class="fa-solid fa-location-dot"></i>高雄市 . 臺灣</div>
-                                <div class="icon"><i class="fa-solid fa-phone"></i>+886 0905569807</div>
-                                <div class="icon"><i class="fa-solid fa-envelope"></i>bocongju@gmail.com</div>
-                                <div class="icon"><i class="fab fa-github"></i>bocongju</div>
-                            </div>
+                        <div class="contact">
+                            <div class="icon"><i class="fa-solid fa-location-dot"></i>高雄市 . 臺灣</div>
+                            <div class="icon"><i class="fa-solid fa-phone"></i>+886 0905569807</div>
+                            <div class="icon"><i class="fa-solid fa-envelope"></i>bocongju@gmail.com</div>
+                            <div class="icon"><i class="fab fa-github"></i>bocongju</div>
                         </div>
                     </div>
                 </div>
@@ -87,11 +85,11 @@
             <!-- start experience -->
             <div id="exp" class="exp hero hero-bg-grey">
                 <div class="container">
-                    <div class="exp-info">
-                        <h3 class="title">經歷</h3>
+                    <div class="exp-title">
+                        <h3>經歷</h3>
                     </div>
-                    <div class="row" style="margin-top: 64px;">
-                        <div class="col-lg-6 left-info js-fadeInLeft">
+                    <div class="exp-contents">
+                        <div class="exp-info js-fadeInLeft">
                             <div class="exp-item">
                                 <h3>學校 : <br> 實踐大學資訊科技與通訊學系</h3>
                             </div>
@@ -102,25 +100,20 @@
                             </div>
                         </div>
                         <div class="js-fadeInRight" style="display: flex;">
-                            <div class="col-lg-5 skill">
+                            <div class="skill">
                             <div class="icon"><i class="fas fa-code"></i></div> <h3>HTML/CSS</h3> 
                                 <p>製作、設計網頁</p>
                             </div>
-                            <div class="col-lg-5 skill">
+                            <div class="skill">
                             <div class="icon"><i class="fab fa-js"></i></div> <h3>JavaScript</h3>
                                 <p>使網頁更生動有趣</p>
                             </div>
-                            <div class="col-lg-5 skill">
+                            <div class="skill">
                             <div class="icon"><i class="fab fa-python"></i></div> <h3>Python</h3>
                                 <p>物件導向程式設計</p>
                             </div>
-                        </div>
-                        
-                        
-                    </div>
-                        
-                    
-                    
+                        </div>   
+                    </div> 
                 </div>
             </div>
             <!-- end experience -->
@@ -129,58 +122,65 @@
             <div id="project" class="project hero hero-bg-brown">
                 <div class="container">
                     <div class="project-info">
-                        <h2 class="title">我的作品</h2>
+                        <h2 class="title">我的作品(練習)</h2>
                     </div>
-                    <div class="owl-carousel owl-theme">
-                        <div>
-                            <a href="#!">
-                                <div class="list-item">
-                                    <div class="image-container">
-                                        <a href="https://github.com/bocongju/tiffany_co" class="image" style="background-image:url(./images/project01.jpeg) ;"></a>
-                                    </div>
-                                    <div class="preview">
-                                        <h5 class="title">Tiffany_co test</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#!">
-                                <div class="list-item">
-                                    <div class="image-container">
-                                        <a href="#!" class="image" style="background-image:url(./images/project.jpg) ;"></a>
-                                    </div>
-                                    <div class="preview">
-                                        <h5 class="title">作品名稱</h5>
+                    <div class="project-item js-fadeInBottom" style="margin-left: 50px;">
+                        <div class="project-inner" style="background-color: #D3B1C2 ;">
+                            <h3 class="project-item-tit">
+                                Tiffany & Co(練習)
+                            </h3>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="image-container">
+                                            <img src="./images/project/tiffany01.jpg" alt="">
+                                        </div>
+                                        <div class="image-container">
+                                            <img src="./images/project/tiffany02.jpg" alt="">
+                                        </div>
+                                        <div class="image-container">
+                                            <img src="./images/project/tiffany03.jpg" alt="">
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#!">
-                                <div class="list-item">
-                                    <div class="image-container">
-                                        <a href="#!" class="image" style="background-image:url(./images/project.jpg) ;"></a>
-                                    </div>
-                                    <div class="preview">
-                                        <h5 class="title">作品名稱</h5>
-                                    </div>
+                                <div class="col-lg-6">
+                                    <p>
+                                    這個練習作品是參考 Tiffany & Co 的網站所刻寫的一頁式網站，主要是練習響應式設計以及Css和插件之應用。
+                                    </p>
+                                    <a href="https://github.com/bocongju/tiffany_co" class="btn">點擊進入 github 觀看</a>
                                 </div>
-                            </a>
+                            </div>  
                         </div>
-                        <div>
-                            <a href="#!">
-                                <div class="list-item">
-                                    <div class="image-container">
-                                        <a href="#!" class="image" style="background-image:url(./images/project.jpg) ;"></a>
-                                    </div>
-                                    <div class="preview">
-                                        <h5 class="title">作品名稱</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        
                     </div>
+                    <div class="project-item js-fadeInBottom" style="margin-right: 50px;">
+                        <div class="project-inner" style="background-color: #efefef ;">
+                            <h3 class="project-item-tit">
+                                OR THIS ONE(練習)
+                            </h3>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="image-container">
+                                            <img src="./images/project/or this one 01.jpg" alt="">
+                                        </div>
+                                        <div class="image-container">
+                                            <img src="./images/project/or this one 02.jpg" alt="">
+                                        </div>
+                                        <div class="image-container">
+                                            <img src="./images/project/or this one 03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p>
+                                    這個練習作品是參考 OR THIS ONE 的網站所刻寫的的一頁式網站，主要是練習jquery以及Css和插件之應用。
+                                    </p>
+                                    <a href="https://github.com/bocongju/OR-THIS-ONE-test" class="btn">點擊進入 github 觀看</a>
+                                </div>
+                            </div>  
+                        </div>
+                    </div> 
                 </div>
             </div>
             <!-- end project -->

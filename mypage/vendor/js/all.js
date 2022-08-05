@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		// 抓取滾動距離
 		scrolledPx = $(this).scrollTop(); // 存取距離上方的值
-		if (scrolledPx >= 150){ // 條件判斷
+		if (scrolledPx >= 100){ // 條件判斷
 			$('.navbar').addClass('active'); // 加上 "active" class
 		} else {
 			$('.navbar').removeClass('active'); // 移除 "active" class
@@ -12,19 +12,9 @@ $(document).ready(function(){
 	})
 
     $('.owl-carousel').owlCarousel({
-		responsive:{
-			0:{
-				items: 1
-			},
-			769:{
-				items: 3
-			}
-		},
-		nav: true,
-		margin: 32,
-		autoplay: true,
-		autoplayTimeout: 3000,
-		loop: true
+		items:1,
+		animateOut: 'animate__fadeOut',
+    	animateIn: 'animate__fadeIn',
 	})
 
 	// ScrollReveal
