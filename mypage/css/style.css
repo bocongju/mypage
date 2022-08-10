@@ -190,12 +190,12 @@ img{
     background-image: url('../images/jumbotron.jpg');
     background-size: cover;
 }
-.jumbotron .container .para{
+.jumbotron .para{
 	position: absolute;
 	top: 450px;
-    left: -200px;
+    left: 50px;
 }
-.jumbotron .container .para p{
+.jumbotron .para p{
     color: #fff;
     font-size: 56px;
 }
